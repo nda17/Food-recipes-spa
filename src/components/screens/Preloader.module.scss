@@ -1,0 +1,36 @@
+.spinnerWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #000;
+}
+
+.spinner {
+	display: grid;
+	place-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	background: conic-gradient(
+		from 180deg at 50% 50%,
+		rgba(82, 0, 255, 0) 0deg,
+		rgb(184, 134, 11) 360deg
+	);
+	animation: spin 2s infinite linear;
+	&::before {
+		content: '';
+		border-radius: 50%;
+		width: 80%;
+		height: 80%;
+		background-color: #000;
+	}
+}
+
+//Animation keyframes
+@keyframes spin {
+	to {
+		transform: rotate(1turn);
+	}
+}
+//

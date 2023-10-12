@@ -1,0 +1,14 @@
+.hamburgerIconWrap,
+.hamburgerButton,
+.GrTextAlignRight,
+.HiOutlineChevronDown {
+	@apply w-8 h-8;
+}
+
+.hamburgerIconWrap {
+	@apply absolute right-[1.1rem] top-[1rem];
+}
+
+.hamburgerButton {
+	@apply flex;
+}

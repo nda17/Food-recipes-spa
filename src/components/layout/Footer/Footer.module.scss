@@ -1,0 +1,34 @@
+.footer {
+	@apply relative;
+	.footerNav {
+		@apply pt-[0rem] pb-[0.18rem] px-[1.1rem] box-content min-h-[4rem] bg-[#181818] relative z-[9999999999];
+		.footerWrap {
+			@apply flex justify-end items-center;
+			.footerLogoWrap {
+				@apply w-[2.7rem] h-[2.7rem] transition-all duration-700 absolute top-[0.45rem] left-[1.2rem] hover:scale-[0.86];
+				.footerLogoIcon {
+					@apply w-[2.5rem] h-[2.5rem];
+				}
+			}
+			.footerInfoTextWrap {
+				@apply flex;
+				.footerInfoTextFirst,
+				.footerInfoTextSecond {
+					@apply text-[#b8860b] text-center text-[0.6rem];
+				}
+				.footerInfoTextFirst {
+					@apply absolute top-[3.2rem] left-[0.8rem] font-medium;
+				}
+				.footerInfoTextSecond {
+					@apply absolute top-[3.2rem] right-[1.2rem] text-center m-auto font-black italic;
+				}
+			}
+			.footerIconWrap {
+				@apply h-[3.8rem] flex justify-between items-center transition-all duration-200 hover:scale-[0.97];
+				.footerLinkIcon {
+					@apply w-[1.45rem] h-[1.45rem] fill-white;
+				}
+			}
+		}
+	}
+}

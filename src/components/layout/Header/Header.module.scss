@@ -1,0 +1,27 @@
+.header {
+	@apply mx-auto;
+	.headerNav {
+		@apply py-[0] px-[1.1rem] box-content h-16 bg-[#181818] relative z-[9999999999];
+		.headerWrap {
+			@apply h-full flex justify-end	items-center z-[-5];
+			.headerLogoWrap {
+				@apply transition-all duration-700 absolute top-[0.4375rem] left-[0.9375rem] hover:scale-[0.86];
+				.headerLogoIcon {
+					@apply w-[3rem] h-[3rem];
+				}
+			}
+			.headerCompanyNameText {
+				@apply text-[#b8860b] text-[0.9rem] font-medium text-center absolute left-[4.7rem] top-[1.6rem] transition-all duration-500 hover:text-[#f5deb3];
+			}
+			.headerListLinkWrap {
+				@apply hidden flex-wrap items-center justify-center lg:flex;
+				.CustomLinkWrap {
+					@apply mr-[2rem];
+					.CustomLink {
+						@apply flex flex-col relative;
+					}
+				}
+			}
+		}
+	}
+}

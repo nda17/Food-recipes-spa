@@ -1,0 +1,32 @@
+.cookiePopupWrap {
+	@apply hidden w-[19rem] h-[19rem] flex flex-col justify-center absolute bottom-[4.5rem] right-[0.5rem] bg-[#484545] rounded-[0.75rem] px-[1rem] py-[1rem] z-[9999999999];
+	.cookiePopupTitleWrap {
+		@apply flex items-center mb-[0.7rem];
+		.cookiePopupTitleIcon {
+			@apply w-[2rem] h-[2rem] mr-[0.3rem];
+		}
+		.cookiePopupTitleText {
+			@apply flex items-center text-[#9a9aff] font-black;
+		}
+	}
+	.cookiePopupText {
+		@apply text-[#ffffff] text-[0.9rem] mb-[0.7rem];
+	}
+	.cookiePopupBtnWrap {
+		@apply flex items-center justify-between;
+		.cookiePopupBtnAccept,
+		.cookiePopupBtnDecline {
+			@apply border border-solid w-[7.8rem] bg-[#4070f4] text-[#ffffff] py-[0.5rem] rounded-[0.25rem] transition-all duration-[0.3s];
+		}
+		.cookiePopupBtnAccept {
+			@apply hover:bg-[#034bf1];
+		}
+		.cookiePopupBtnDecline {
+			@apply hover:bg-[#e74646];
+		}
+	}
+}
+
+.show {
+	@apply block;
+}
