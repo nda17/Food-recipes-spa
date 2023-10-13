@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import CustomLink from '../../ui/links/CustomLink'
 import useClickOutside from '../../../hooks/useClickOutside'
 import styles from './MobileMenu.module.scss'
-import Logo from '../../../public/images/YBS-white.svg'
+import Logo from '../../../public/images/catering.png'
 
 const MobileMenu = props => {
 	const { isVisible, toggleVisible = Function.prototype } = props //Состояние показан бургер или стрелка (открыто мобильное меню или нет), функция закрытия мобильного меню
@@ -26,13 +26,6 @@ const MobileMenu = props => {
 						onClick={toggleVisible}
 					>
 						About
-					</CustomLink>
-					<CustomLink
-						to='/contacts'
-						className={styles.mobileMenuCustomLink}
-						onClick={toggleVisible}
-					>
-						Contacts
 					</CustomLink>
 				</div>
 			</article>

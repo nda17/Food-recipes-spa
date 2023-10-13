@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import CustomLink from '../../ui/links/CustomLink'
 import cn from 'clsx'
 import styles from './Header.module.scss'
-import Logo from '../../../public/images/YBS-white.svg'
+import Logo from '../../../public/images/catering.png'
 import HamburgerMenu from './HamburgerMenu'
 import MobileMenu from './MobileMenu'
 import useToggle from '../../../hooks/useToggle'
@@ -30,7 +30,7 @@ const Header = () => {
 							alt='Logo'
 						/>
 					</a>
-					<p className={styles.headerCompanyNameText}>TITLE</p>
+					<p className={styles.headerCompanyNameText}>FOOD RECIPIES</p>
 					<div className={styles.headerListLinkWrap}>
 						<ul className={styles.CustomLinkWrap}>
 							<li>

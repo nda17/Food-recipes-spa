@@ -1,5 +1,5 @@
 import ButtonGoBack from '../../ui/buttons/ButtonGoBack'
-import Logo from '../../../public/images/YBS-white.svg'
+import Logo from '../../../public/images/catering.png'
 import CookiePopup from '../../ui/modal/CookiePopup'
 import { BsGithub } from 'react-icons/bs'
 import styles from './Footer.module.scss'

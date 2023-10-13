@@ -5,7 +5,8 @@ import './assets/styles/index.scss'
 const NotFound = lazy(() => import('./pages/NotFound'))
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
-const Contacts = lazy(() => import('./pages/Contacts'))
+const Category = lazy(() => import('./pages/Category'))
+const Recipes = lazy(() => import('./pages/Recipes'))
 
 const App = () => {
 	return (
@@ -13,8 +14,9 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />
+					<Route path='/category/:name' component={Category} />
+					<Route path='/meal/:id' component={Recipes} />
 					<Route path='about' element={<About />} />
-					<Route path='contacts' element={<Contacts />} />
 					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>
@@ -23,3 +25,4 @@ const App = () => {
 }
 
 export default App
+

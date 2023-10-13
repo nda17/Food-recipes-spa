@@ -1,7 +1,10 @@
-import About from '../components/layout/Main/About'
+const About = () => {
 
-const AboutPage = () => {
-	return <About />
+	return (
+		<>
+			<article>CONTENTabout</article>
+		</>
+	)
 }
 
-export default AboutPage
+export default About

@@ -2,7 +2,7 @@
 .hamburgerButton,
 .GrTextAlignRight,
 .HiOutlineChevronDown {
-	@apply w-8 h-8;
+	@apply w-8 h-8 lg:hidden;
 }
 
 .hamburgerIconWrap {

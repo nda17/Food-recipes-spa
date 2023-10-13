@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import styles from './NotFoundPage.module.scss'
+import styles from './NotFound.module.scss'
 
-const NotFoundPage = () => {
+const NotFound = () => {
 	return (
 		<>
 			<p className={styles.titleNotFound}>
@@ -15,4 +15,4 @@ const NotFoundPage = () => {
 	)
 }
 
-export default NotFoundPage
+export default NotFound
