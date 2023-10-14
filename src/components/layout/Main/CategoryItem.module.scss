@@ -1,17 +1,18 @@
 .categoryCardWrap {
+    @apply flex flex-col justify-center p-4 w-[95%] max-w-[300px] mt-0 mb-[1rem] mx-auto border-[3px] border-solid border-[darkslateblue] bg-[deepskyblue] rounded-[1rem];
     .categoryCardImage {
-
+       @apply w-[100%] p-4;
     }
     .categoryCardTitle {
-
+        @apply font-black text-center;
     }
 
     .categoryCardDescription {
-
+        @apply p-4 max-h-28 overflow-hidden mb-[1.5rem];
     }
 
-    .categoryCardButtonLinkToCategory {
-
+    .categoryCardButtonLinkCategory {
+        @apply w-[9rem] bg-[tomato] py-[1rem];
     }
 
 }

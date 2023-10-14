@@ -1,8 +1,8 @@
-import styles from './CategoryList.module.scss'
+import styles from './CategoryItem.module.scss'
 
 const CategoryItem = props => {
 	const {
-		idCategory: id,
+		// idCategory: id,
 		strCategory: titleCategory,
 		strCategoryThumb: imageCategory,
 		strCategoryDescription: descriptionCategory

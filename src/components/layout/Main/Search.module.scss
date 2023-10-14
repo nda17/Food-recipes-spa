@@ -1,9 +1,11 @@
 .searchWrap {
+    @apply p-[0.7rem] flex justify-between;
     .searchInputForm {
+        @apply w-[80%] h-[3rem] border-[1px] border-black p-[10px];
 
     }
 
     .searchButton {
-        
+
     }
 }
