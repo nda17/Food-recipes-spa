@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import CustomLink from '../../ui/links/CustomLink'
 import cn from 'clsx'
+import CustomLink from '../../ui/links/CustomLink'
 import styles from './Header.module.scss'
 import Logo from '../../../public/images/catering.png'
 import HamburgerMenu from './HamburgerMenu'
@@ -13,10 +13,10 @@ const Header = () => {
 		//Animation logo
 		let count = 0
 		setInterval(function () {
-			count === 360 ? (count = 0) : count--
+			count === 360 ? (count = 0) : count++
 			document.querySelector(
-				'.rotateEffect'
-			).style.transform = `rotate3d(1, 1, 1, ${count}deg)`
+				'.rotateEffectHeader'
+			).style.transform = `rotate(${count}deg)`
 		}, 40)
 	}, [])
 	return (
@@ -25,7 +25,7 @@ const Header = () => {
 				<div className={styles.headerWrap}>
 					<a className={styles.headerLogoWrap} href='#)' id='header'>
 						<img
-							className={cn(styles.headerLogoIcon, 'rotateEffect')}
+							className={cn(styles.headerLogoIcon, 'rotateEffectHeader')}
 							src={Logo}
 							alt='Logo'
 						/>
@@ -43,13 +43,6 @@ const Header = () => {
 							<li>
 								<CustomLink to='/about' className={styles.CustomLink}>
 									About
-								</CustomLink>
-							</li>
-						</ul>
-						<ul className={styles.CustomLinkWrap}>
-							<li>
-								<CustomLink to='/contacts' className={styles.CustomLink}>
-									Contacts
 								</CustomLink>
 							</li>
 						</ul>

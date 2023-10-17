@@ -19,7 +19,8 @@ const { searchCategory = Function.prototype } = props
 			<input
 				className={styles.searchInputForm}
 				type='search'
-				placeholder='Category search'
+				placeholder='Category search...'
+                color='red'
 				value={search}
 				onChange={event => setSearch(event.target.value)} //Обработчик на изменения данных в input и сохранение в state
 				onKeyDown={handleKey} //Обработка нажатия Enter

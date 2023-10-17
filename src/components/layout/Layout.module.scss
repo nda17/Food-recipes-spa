@@ -3,6 +3,11 @@
 	flex-direction: column;
 	justify-content: center; */
 	//
-    @apply flex flex-col justify-center flex-auto relative border-x-[3px] border-solid border-x-[#207081] overflow-y-auto;
+    @apply flex justify-center gap-5 flex-wrap flex-auto relative border-x-[2px] border-solid border-x-[#78765d] py-[1.5rem] px-[0.9rem] sm:px-[1.7rem] md:px-[4.7rem];
 }
 
+			/* sm: '576px', //container 540px
+			md: '768px', //container 720px
+			lg: '992px', //container 960px
+			xl: '1200px', //container 1140px
+			xxl: '1400px' //container 1320px */

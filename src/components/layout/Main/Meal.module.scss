@@ -1,21 +1,13 @@
-.categoryCardWrap {
+.mealCardWrap {
 	@apply bg-[#e8eced] flex flex-col justify-center p-4 w-[80%] sm:w-[47%] lg:w-[31%] xl:w-[23%] xxl:w-[28%] max-w-[260px] md:max-w-[266px] xxl:max-w-[271px] border-[3px] border-solid border-[#ffd700] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
-	.categoryCardImage {
-		@apply w-[100%] mb-[1rem];
+	.mealCardImage {
+		@apply w-[100%] mb-[1rem] rounded-[0.8rem] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)];
 	}
 	.categoryCardTitle {
 		@apply font-black text-center mb-[1rem];
 	}
 
-	.categoryCardDescription {
-		@apply max-h-28 overflow-hidden mb-[1.5rem] text-left;
-	}
-
-	.categoryCardButtonLinkCategory {
+	.mealCardButtonLinkMeal {
 		@apply w-[9rem] bg-[#ffd700] py-[1rem] text-center hover:bg-[#e9ce24] transition-all duration-[0.3s] hover:text-white shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
-	}
-
-	.categoryCardButtonLinkCategoryDescription {
-        @apply text-[tomato] font-bold;
 	}
 }

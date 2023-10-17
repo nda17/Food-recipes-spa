@@ -1,0 +1,18 @@
+.cardDescriptionWrap {
+	@apply bg-[#e8eced] flex flex-col justify-center p-4 max-w-[500px] sm:max-w-[100%] border-[3px] border-solid border-[#ffd700] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
+
+	.cardDescriptionImage {
+		@apply w-[100%] mb-[1rem];
+	}
+	.cardDescriptionTitle {
+		@apply font-black text-center mb-[1rem];
+	}
+
+	.cardDescriptionText {
+		@apply mb-[1.5rem] text-left;
+	}
+
+	.btnGoBackWrap {
+		@apply w-[100%] flex justify-center;
+	}
+}

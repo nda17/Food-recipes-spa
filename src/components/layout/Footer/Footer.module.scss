@@ -1,7 +1,7 @@
 .footer {
 	@apply relative;
 	.footerNav {
-		@apply pt-[0rem] pb-[0.18rem] px-[1.1rem] box-content min-h-[4rem] bg-[#207081] relative z-[9999999999];
+		@apply pt-[0rem] pb-[0.18rem] px-[1.1rem] box-content min-h-[4rem] bg-[#78765d] relative z-[9999999999];
 		.footerWrap {
 			@apply flex justify-end items-center;
 			.footerLogoWrap {
@@ -14,10 +14,10 @@
 				@apply flex;
 				.footerInfoTextFirst,
 				.footerInfoTextSecond {
-					@apply text-[#b8860b] text-center text-[0.6rem];
+					@apply text-[#ffffff] text-center text-[0.6rem];
 				}
 				.footerInfoTextFirst {
-					@apply absolute top-[3.2rem] left-[0.8rem] font-medium;
+					@apply absolute top-[3.2rem] left-[1.7rem] font-medium;
 				}
 				.footerInfoTextSecond {
 					@apply absolute top-[3.2rem] right-[1.2rem] text-center m-auto font-black italic;

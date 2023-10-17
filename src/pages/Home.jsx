@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import API_URL from '../config'
 import Preloader from '../components/screens/Preloader'
 import CategoryList from '../components/layout/Main/CategoryList'
 import Search from '../components/layout/Main/Search'
@@ -22,7 +23,7 @@ const Home = () => {
 	useEffect(
 		function getAllCategories() {
 			axios
-				.get('https://www.themealdb.com/api/json/v1/1/categories.php/')
+				.get(API_URL + 'categories.php')
 				.then(response => {
 					setAllCategories(response.data.categories)
 					!filteredCategories.length
@@ -39,14 +40,12 @@ const Home = () => {
 	)
 	return (
 		<>
-			<article>
-				<Search searchCategory={searchCategory} />
-				{loading ? (
-					<Preloader />
-				) : (
-					<CategoryList filteredCategories={filteredCategories} />
-				)}
-			</article>
+			<Search searchCategory={searchCategory} />
+			{loading ? (
+				<Preloader />
+			) : (
+				<CategoryList filteredCategories={filteredCategories} />
+			)}
 		</>
 	)
 }
