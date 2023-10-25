@@ -6,8 +6,9 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
 const Category = lazy(() => import('./pages/Category'))
-const CategoryDescription = lazy(() => import('./pages/CategoryDescription'))
+const Description = lazy(() => import('./pages/Description'))
 const Recipe = lazy(() => import('./pages/Recipe'))
+const VideoRecipe = lazy(() => import('./pages/VideoRecipe'))
 
 const App = () => {
 	return (
@@ -16,8 +17,10 @@ const App = () => {
 				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />
 					<Route path='category/:name' element={<Category />} />
-					<Route path='category/:name/:description' element={<CategoryDescription />} />
-					<Route path='meal/:recipe/:id' element={<Recipe />} />
+					<Route path='category/:name/:description' element={<Description />} />
+					<Route path='meal/:recipe/:id' element={<Recipe />}>
+						<Route path='video' element={<VideoRecipe />} />
+					</Route>
 					<Route path='about' element={<About />} />
 					<Route path='*' element={<NotFound />} />
 				</Route>

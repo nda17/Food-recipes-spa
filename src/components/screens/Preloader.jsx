@@ -1,10 +1,16 @@
-import './Preloader.module.scss'
+import { RotatingLines } from 'react-loader-spinner'
+import styles from './Preloader.module.scss'
 
 const Preloader = () => {
 	return (
-		<div className='spinnerWrapper'>
-			<span className='spinner'></span>
-		</div>
+		<RotatingLines
+			className={styles.spinnerWrapper}
+			strokeColor='#ffd700'
+			strokeWidth='5'
+			animationDuration='0.75'
+			width='50'
+			visible={true}
+		/>
 	)
 }
 

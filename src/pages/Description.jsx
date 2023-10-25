@@ -1,9 +1,8 @@
-import Preloader from '../components/screens/Preloader'
-import ButtonGoBack from '../components/ui/buttons/ButtonGoBack'
-import styles from './CategoryDescription.module.scss'
 import { useLocation } from 'react-router-dom'
+import ButtonGoBack from '../components/ui/buttons/ButtonGoBack'
+import styles from './Description.module.scss'
 
-const CategoryDescription = () => {
+const Description = () => {
 	const location = useLocation()
 	const { titleCategory, descriptionCategory, imageCategory } = location.state
 	return (
@@ -24,4 +23,4 @@ const CategoryDescription = () => {
 	)
 }
 
-export default CategoryDescription
+export default Description

@@ -42,7 +42,7 @@ module.exports = {
 				'6xl': '4rem'
 			},
 			fontWeight: {
-        inherit: 'inherit',
+				inherit: 'inherit',
 				hairline: '100',
 				thin: '200',
 				light: '300',

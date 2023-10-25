@@ -1,0 +1,49 @@
+.cardRecipeWrap {
+	@apply bg-[#e8eced] flex flex-col justify-center p-4 max-w-[500px] sm:max-w-[100%] border-[3px] border-solid border-[#ffd700] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
+	.cardRecipeImage {
+		@apply w-[90%] md:w-[80%] lg:w-[70%] mt-[0] mx-[auto] mb-[1.5rem] rounded-[0.8rem];
+	}
+
+	.cardRecipeTitle {
+		@apply font-black text-center mb-[1rem] text-[2rem];
+	}
+
+	.cardRecipeTextCategory {
+		@apply font-black;
+	}
+
+	.cardRecipeTextArea {
+		@apply font-black mb-[1rem];
+	}
+
+	.cardRecipeText {
+		@apply mb-[1rem];
+	}
+	.cardRecipeTableWrap {
+		@apply mb-[1.7rem];
+		.cardRecipeColumnTextWrap {
+			@apply flex border-gray-400 border-b-[1px] border-solid py-3;
+			.cardRecipeTableColumn {
+				@apply flex flex-col text-center w-[50%] font-bold;
+			}
+		}
+
+		.cardRecipeIngredientsWrap {
+			@apply w-[100%] flex border-gray-400 border-b-[1px] border-solid py-3;
+			.cardRecipeIngredients {
+				@apply flex w-[50%];
+				.cardRecipeIngredientsTextColumn {
+					@apply w-[100%] text-center text-indigo-700;
+				}
+			}
+		}
+	}
+
+	.watchVideoRecipeButton {
+		@apply text-tomato font-bold pt-[1rem] mx-auto mb-[1.7rem] w-[10.8rem] bg-[#ffd700] py-[1rem] text-center hover:bg-[#e9ce24] transition-all duration-[0.3s] hover:text-white shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
+	}
+
+	.btnGoBackWrap {
+		@apply w-[100%] flex justify-center;
+	}
+}

@@ -1,9 +1,9 @@
-import { Outlet } from 'react-router-dom'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import { Suspense } from 'react'
-import Preloader from '../screens/Preloader'
 import cn from 'clsx'
+import { Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
+import Preloader from '../screens/Preloader'
+import Footer from './Footer/Footer'
+import Header from './Header/Header'
 import styles from './Layout.module.scss'
 
 const Layout = () => {
@@ -21,3 +21,5 @@ const Layout = () => {
 }
 
 export default Layout
+
+

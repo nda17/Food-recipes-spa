@@ -1,13 +1,13 @@
 .mealCardWrap {
 	@apply bg-[#e8eced] flex flex-col justify-center p-4 w-[80%] sm:w-[47%] lg:w-[31%] xl:w-[23%] xxl:w-[28%] max-w-[260px] md:max-w-[266px] xxl:max-w-[271px] border-[3px] border-solid border-[#ffd700] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
 	.mealCardImage {
-		@apply w-[100%] mb-[1rem] rounded-[0.8rem] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)];
+		@apply w-[100%] mb-[1rem] rounded-[0.8rem] shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem] border-2 border-[#ffd700] border-solid;
 	}
 	.categoryCardTitle {
-		@apply font-black text-center mb-[1rem];
+		@apply font-black mb-[1rem];
 	}
 
 	.mealCardButtonLinkMeal {
-		@apply w-[9rem] bg-[#ffd700] py-[1rem] text-center hover:bg-[#e9ce24] transition-all duration-[0.3s] hover:text-white shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
+		@apply w-[9rem] mx-auto bg-[#ffd700] py-[1rem] text-center hover:bg-[#e9ce24] transition-all duration-[0.3s] hover:text-white shadow-[0px_5px_10px_2px_rgba(34,60,80,0.2)] rounded-[0.8rem];
 	}
 }

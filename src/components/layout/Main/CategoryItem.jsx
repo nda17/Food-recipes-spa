@@ -1,9 +1,8 @@
-import styles from './CategoryItem.module.scss'
 import { Link } from 'react-router-dom'
+import styles from './CategoryItem.module.scss'
 
 const CategoryItem = props => {
 	const {
-		// idCategory: id,
 		strCategory: titleCategory,
 		strCategoryThumb: imageCategory,
 		strCategoryDescription: descriptionCategory
@@ -18,7 +17,7 @@ const CategoryItem = props => {
 			/>
 			<h2 className={styles.categoryCardTitle}>{titleCategory}</h2>
 			<p className={styles.categoryCardDescription}>
-				{descriptionCategory.slice(0, 60)}
+				{descriptionCategory.slice(0, 52)}
 				<Link
 					to={`/category/${titleCategory}/Description`}
 					state={{

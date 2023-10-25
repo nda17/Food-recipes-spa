@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
-import API_URL from '../config'
-import Preloader from '../components/screens/Preloader'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import CategoryList from '../components/layout/Main/CategoryList'
 import Search from '../components/layout/Main/Search'
-import axios from 'axios'
+import Preloader from '../components/screens/Preloader'
+import API_URL from '../config'
 
 const Home = () => {
 	const [allCategories, setAllCategories] = useState([])
@@ -40,11 +40,13 @@ const Home = () => {
 	)
 	return (
 		<>
-			<Search searchCategory={searchCategory} />
 			{loading ? (
 				<Preloader />
 			) : (
-				<CategoryList filteredCategories={filteredCategories} />
+				<>
+					<Search searchCategory={searchCategory} />
+					<CategoryList filteredCategories={filteredCategories} />
+				</>
 			)}
 		</>
 	)

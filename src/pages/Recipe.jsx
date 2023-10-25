@@ -1,31 +1,91 @@
 import axios from 'axios'
-import API_URL from '../config'
-import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-// import styles from './Search.module.scss'
+import { Link, Outlet, useParams } from 'react-router-dom'
+import Preloader from '../components/screens/Preloader'
+import ButtonGoBack from '../components/ui/buttons/ButtonGoBack'
+import API_URL from '../config'
+import styles from './Recipe.module.scss'
 
 const Recipe = () => {
+	const [recipe, setRecipe] = useState({})
 	const { id } = useParams()
+
+	// const { strArea: area } = meal[0]
+
+
 
 	useEffect(
 		function getMealById() {
 			axios
 				.get(API_URL + 'lookup.php?i=' + id)
-				.then(response => console.log(response.data.meals))
+				.then(response => setRecipe(response.data.meals[0]))
 				.catch(error => {
 					console.error(error)
 				})
 		},
-		[name]
+		[id]
 	)
-
-
 	return (
-        <p>RESIPE PAGE</p>
+		<>
+			{!recipe.idMeal ? (
+				<Preloader />
+			) : (
+				<div className={styles.cardRecipeWrap}>
+					<img
+						className={styles.cardRecipeImage}
+						src={recipe.strMealThumb}
+						alt={`Product image: ${recipe.strMealThumb}`}
+					/>
+					<h2 className={styles.cardRecipeTitle}>{recipe.strMeal}</h2>
+					<p className={styles.cardRecipeTextCategory}>
+						{`Category: ${recipe.strCategory}`}
+					</p>
+					<p className={styles.cardRecipeTextArea}>
+						{`Area: ${recipe.strArea}`}
+					</p>
+					<p className={styles.cardRecipeText}>{recipe.strInstructions}</p>
+					<div className={styles.cardRecipeTableWrap}>
+						<div className={styles.cardRecipeColumnTextWrap}>
+							<p className={styles.cardRecipeTableColumn}>Ingredient:</p>
+							<p className={styles.cardRecipeTableColumn}>Measure:</p>
+						</div>
+						{Object.keys(recipe).map(key => {
+							if (key.includes('Ingredient') && recipe[key]) {
+								return (
+									<div className={styles.cardRecipeIngredientsWrap} key={key}>
+										<div className={styles.cardRecipeIngredients}>
+											<p className={styles.cardRecipeIngredientsTextColumn}>
+												{recipe[key]}
+											</p>
+										</div>
+										<div className={styles.cardRecipeIngredients}>
+											<p className={styles.cardRecipeIngredientsTextColumn}>
+												{recipe[`strMeasure${key.slice(13)}`]}
+											</p>
+										</div>
+									</div>
+								)
+							}
+							return null
+						})}
+					</div>
+					<Link
+						to={'video'}
+						state={{
+							strYoutube: recipe.strYoutube
+						}}
+						className={styles.watchVideoRecipeButton}
+					>
+						Watch video recipe
+					</Link>
+					<Outlet />
+					<div className={styles.btnGoBackWrap}>
+						<ButtonGoBack />
+					</div>
+				</div>
+			)}
+		</>
 	)
 }
 
 export default Recipe
-
-
-
