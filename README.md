@@ -9,7 +9,7 @@
 - React-router-DOM v6.15.0
 
 ## Deployed:
-[Watch here](ADDED LINK)
+[Watch here](https://nda17.github.io/Food-recipes-spa/)
 
 ## Project setup:
 ```
