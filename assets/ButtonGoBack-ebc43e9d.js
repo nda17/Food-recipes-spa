@@ -1,0 +1,1 @@
+import{b as a,j as n}from"./index-b958d6c1.js";const s="_btnGoBack_9jjod_1",c={btnGoBack:s},B=()=>{const t=a(),o=()=>t(-1);return n.jsx("button",{className:c.btnGoBack,onClick:o,children:"Back"})};export{B};

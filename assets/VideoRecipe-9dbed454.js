@@ -1,0 +1,1 @@
+import{u as n,a,j as e}from"./index-b958d6c1.js";const r="_embedContainer_1vkrh_1",i={embedContainer:r},m=()=>{const{id:t}=n(),s=a(),{strYoutube:o}=s.state;return e.jsx(e.Fragment,{children:e.jsx("div",{className:i.embedContainer,children:e.jsx("iframe",{title:t,src:`https://www.youtube.com/embed/${o.slice(-11)}`,allowFullScreen:!0})})})};export{m as default};

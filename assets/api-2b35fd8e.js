@@ -1,0 +1,1 @@
+const a="1",s=`https://www.themealdb.com/api/json/v1/${a}/`,o=async()=>await(await fetch(s+"categories.php")).json(),n=async e=>await(await fetch(s+"filter.php?c="+e)).json(),r=async e=>await(await fetch(s+"lookup.php?i="+e)).json();export{n as a,r as b,o as g};
