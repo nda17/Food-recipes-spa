@@ -9,6 +9,3 @@ export default defineConfig({
 		open: 'http://localhost:5173/'
 	}
 })
-
-
-

@@ -1,37 +1,37 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Search.module.scss'
 
 const Search = props => {
-const { searchCategory = Function.prototype } = props
+	const { searchCategory = Function.prototype } = props
+	const [value, setValue] = useState('')
 
-    const [search, setSearch] = useState('')
+	const onChange = event => {
+		const value = event.target.value
+		setValue(value)
+	}
 
-	//Обработка нажатия клавиши Enter
 	const handleKey = event => {
 		if (event.key === 'Enter') {
 			event.preventDefault()
-			searchCategory(search) //Передача введенных данных в searchMovies
+			searchCategory(value)
 		}
 	}
+
+	useEffect(() => {
+		searchCategory(value)
+	}, [value])
 
 	return (
 		<form className={styles.searchWrap}>
 			<input
 				className={styles.searchInputForm}
-				type='search'
-				placeholder='Category search...'
-                color='red'
-				value={search}
-				onChange={event => setSearch(event.target.value)} //Обработчик на изменения данных в input и сохранение в state
-				onKeyDown={handleKey} //Обработка нажатия Enter
+				type="search"
+				placeholder="Category search..."
+				color="red"
+				value={value}
+				onChange={onChange}
+				onKeyDown={handleKey}
 			/>
-			<button
-				type='button'
-				className={styles.searchButton}
-				onClick={() => searchCategory(search)} //Обработка клика по кнопке Search
-			>
-				Search
-			</button>
 		</form>
 	)
 }

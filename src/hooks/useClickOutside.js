@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 
-//Отслеживание клика вне области корзины
 const useClickOutside = (ref, callback) => {
 	const handleClick = event => {
 		if (ref.current && !ref.current.contains(event.target)) {

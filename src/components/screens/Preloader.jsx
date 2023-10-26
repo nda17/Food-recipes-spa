@@ -5,10 +5,10 @@ const Preloader = () => {
 	return (
 		<RotatingLines
 			className={styles.spinnerWrapper}
-			strokeColor='#ffd700'
-			strokeWidth='5'
-			animationDuration='0.75'
-			width='50'
+			strokeColor="#ffd700"
+			strokeWidth="5"
+			animationDuration="0.75"
+			width="50"
 			visible={true}
 		/>
 	)

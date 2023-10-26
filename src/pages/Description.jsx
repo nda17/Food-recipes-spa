@@ -5,6 +5,7 @@ import styles from './Description.module.scss'
 const Description = () => {
 	const location = useLocation()
 	const { titleCategory, descriptionCategory, imageCategory } = location.state
+
 	return (
 		<>
 			<div className={styles.cardDescriptionWrap}>

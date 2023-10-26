@@ -1,9 +1,8 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './Meal.module.scss'
 
 const Meal = props => {
 	const { strMeal: titleMeal, idMeal, strMealThumb: imageMeal } = props
-	const { name } = useParams()
 
 	return (
 		<div className={styles.mealCardWrap}>
@@ -24,5 +23,3 @@ const Meal = props => {
 }
 
 export default Meal
-
-

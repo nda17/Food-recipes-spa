@@ -9,5 +9,3 @@ const useToggle = initialValue => {
 }
 
 export default useToggle
-
-

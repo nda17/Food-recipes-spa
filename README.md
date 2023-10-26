@@ -4,9 +4,9 @@
 - Vite v4.4.5 + React v18.2.0
 - JSX
 - HTML
+- Tailwind-CSS
 - SCSS
 - React-router-DOM v6.15.0
-- Tailwind
 
 ## Deployed:
 [Watch here](ADDED LINK)

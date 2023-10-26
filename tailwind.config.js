@@ -1,6 +1,8 @@
+/* eslint-disable */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/assets/styles/index.scss', './src/**/*.{js,ts,jsx,tsx}'],
+	darkMode: 'media',
 	theme: {
 		container: {},
 		//Custom media query

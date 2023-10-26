@@ -1,3 +1,6 @@
 .aboutWrap {
-    @apply flex items-center;
+	@apply flex flex-col justify-center items-center;
+	.aboutText {
+		@apply mb-[2rem];
+	}
 }

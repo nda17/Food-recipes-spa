@@ -1,30 +1,22 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link, Outlet, useParams } from 'react-router-dom'
+import { getMealById } from '../api'
 import Preloader from '../components/screens/Preloader'
 import ButtonGoBack from '../components/ui/buttons/ButtonGoBack'
-import API_URL from '../config'
 import styles from './Recipe.module.scss'
 
 const Recipe = () => {
 	const [recipe, setRecipe] = useState({})
 	const { id } = useParams()
 
-	// const { strArea: area } = meal[0]
+	useEffect(() => {
+		getMealById(id)
+			.then(data => setRecipe(data.meals[0]))
+			.catch(error => {
+				console.error(error)
+			})
+	}, [id])
 
-
-
-	useEffect(
-		function getMealById() {
-			axios
-				.get(API_URL + 'lookup.php?i=' + id)
-				.then(response => setRecipe(response.data.meals[0]))
-				.catch(error => {
-					console.error(error)
-				})
-		},
-		[id]
-	)
 	return (
 		<>
 			{!recipe.idMeal ? (

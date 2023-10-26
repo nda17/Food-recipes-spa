@@ -10,7 +10,7 @@ const NotFound = () => {
 				Страница не существует.
 				<br />
 				Перейти на
-				<Link to='/' className={styles.titleNotFoundLink}>
+				<Link to="/" className={styles.titleNotFoundLink}>
 					ГЛАВНУЮ СТРАНЦУ
 				</Link>
 			</p>
