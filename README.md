@@ -4,19 +4,21 @@
 - Vite v4.4.5 + React v18.2.0
 - JSX
 - HTML
-- Tailwind-CSS
-- SCSS
-- React-router-DOM v6.15.0
-
+- TailwindCSS / SCSS
+- 
 ## Deployed:
 [Watch here](https://nda17.github.io/Food-recipes-spa/)
 
 ## Project setup:
 ```
-npm install / yarn
+yarn
+- or
+npm install
 ```
 
 ## Compiles and minifies for production:
 ```
-npm run build /yarn run build
+yarn run build
+- or
+npm run build
 ```
