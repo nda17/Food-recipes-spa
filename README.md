@@ -5,7 +5,7 @@
 - JSX
 - HTML
 - TailwindCSS / SCSS
-- 
+  
 ## Deployed:
 [Watch here](https://nda17.github.io/Food-recipes-spa/)
 
